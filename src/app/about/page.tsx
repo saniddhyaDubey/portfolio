@@ -1,12 +1,12 @@
-import HeroSection from "@/components/HeroSections";
+import AboutSection from "@/components/about/AboutSection";
 import NavBar from "@/components/navbar";
 import SideBar from "@/components/sidebar";
 
-export default function Home() {
+export default function About() {
   return (
     <div>
       <NavBar />
-      <HeroSection />
+      <AboutSection />
       <SideBar />
     </div>
   );
