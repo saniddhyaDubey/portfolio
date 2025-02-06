@@ -45,9 +45,11 @@ export default function HeroSection() {
             My Portfolio
           </button>
         </Link>
-        <button className="px-6 py-2 font-courier text-white border-2 border-white hover:bg-white hover:text-black transition-all">
-          Contact Me
-        </button>
+        <Link href={"/contact"}>
+          <button className="px-6 py-2 font-courier text-white border-2 border-white hover:bg-white hover:text-black transition-all">
+            Contact Me
+          </button>
+        </Link>
       </div>
     </section>
   );
