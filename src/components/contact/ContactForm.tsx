@@ -45,14 +45,14 @@ export default function ConnectForm() {
               onChange={(e) => setName(e.target.value)}
               type="text"
               placeholder="Name"
-              className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-md bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+              className="w-full sm:w-1/2 p-3 border border-black dark:border-gray-400 rounded-md bg-transparent text-black dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
             />
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               placeholder="Email"
-              className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-md bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+              className="w-full sm:w-1/2 p-3 border border-black dark:border-gray-400 rounded-md bg-transparent text-black dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
             />
           </div>
           {/* Message Field */}
@@ -61,14 +61,14 @@ export default function ConnectForm() {
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Message"
             rows={5}
-            className="w-full p-3 border border-gray-400 rounded-md bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+            className="w-full p-3 border border-black dark:border-gray-400 rounded-md bg-transparent text-black dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
           ></textarea>
           {/* Send Button */}
           <button
             onClick={handleSendEmail}
             disabled={isSending}
             type="submit"
-            className="px-6 py-2 border border-white text-white hover:bg-white hover:text-black rounded-md transition-all"
+            className="px-6 py-2 border border-black dark:border-white text-black dark:text-white bg-white dark:bg-black hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black rounded-md transition-all"
           >
             {isSending ? "Sending..." : "Send"}
           </button>

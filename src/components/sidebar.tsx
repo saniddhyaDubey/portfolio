@@ -26,7 +26,7 @@ export default function SideBar() {
         <FaLinkedin />
       </Link>
 
-      <div className="w-[2px] h-16 bg-white m-2"></div>
+      <div className="w-[2px] h-16 bg-black dark:bg-white m-2"></div>
       <div className="-rotate-90 mt-6">Follow me</div>
     </div>
   );

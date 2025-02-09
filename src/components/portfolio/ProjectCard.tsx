@@ -10,7 +10,7 @@ interface ProjectProp {
 
 export default function ProjectCard({ project }: ProjectProp) {
   return (
-    <div className="relative w-52 h-52 border-2 border-white rounded-md overflow-hidden group mt-8">
+    <div className="relative w-52 h-52 border-2 border-black dark:border-white rounded-md overflow-hidden group mt-8">
       {/* Project Image */}
       <Image
         src={project.image}

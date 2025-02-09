@@ -21,7 +21,9 @@ export default function SkillContent() {
     <section className="flex flex-col lg:flex-row items-start gap-8 py-16">
       {/* Left Column */}
       <div className="lg:w-1/3 pt-10">
-        <h2 className="text-3xl font-courier text-white">Skills</h2>
+        <h2 className="text-3xl font-courier text-black dark:text-white">
+          Skills
+        </h2>
       </div>
 
       {/* Right Column */}
@@ -50,8 +52,10 @@ function SkillBar({ skill, percentage }: Skill) {
     <div className="space-y-2">
       {/* Skill Name */}
       <div className="flex justify-between">
-        <p className="text-lg font-courier text-white">{skill}</p>
-        <span className="text-sm italic font-courier text-white">
+        <p className="text-lg font-courier text-black dark:text-white">
+          {skill}
+        </p>
+        <span className="text-sm italic font-courier text-black dark:text-white">
           {percentage}%
         </span>
       </div>

@@ -22,7 +22,7 @@ export default function SlidingDrawer() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="size-5"
+          className="size-5 text-black dark:text-white"
         >
           <path
             fillRule="evenodd"
@@ -36,11 +36,11 @@ export default function SlidingDrawer() {
         initial={{ x: "100%" }}
         animate={{ x: isOpen ? 0 : "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed top-0 right-0 h-full w-64 bg-black text-white p-4 z-50"
+        className="fixed top-0 right-0 h-full w-64 bg-black text-white dark:bg-white dark:text-black p-4 z-50"
       >
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-4 right-4 p-2 text-white"
+          className="absolute top-4 right-4 p-2 text-white dark:text-black"
           aria-label="Close menu"
         >
           <X size={24} />

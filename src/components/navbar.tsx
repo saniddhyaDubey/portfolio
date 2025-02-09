@@ -1,15 +1,24 @@
 "use client";
 
 import SlidingDrawer from "./drawerScreen";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <div className="flex p-6 gap-x-10 w-full justify-end">
       <div
         className="cursor-pointer"
-        onClick={() => {
-          console.log("Light Clicked!");
-        }}
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +26,7 @@ export default function NavBar() {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="size-5"
+          className="size-5 dark:white"
         >
           <path
             strokeLinecap="round"
