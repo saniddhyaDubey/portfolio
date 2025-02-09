@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import GetInTouch from "./getInTouch";
 import ConnectForm from "./ContactForm";

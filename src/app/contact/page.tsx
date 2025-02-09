@@ -1,3 +1,5 @@
+"use client";
+
 import ContactSection from "@/components/contact/ContactSection";
 import NavBar from "@/components/navbar";
 import SideBar from "@/components/sidebar";
