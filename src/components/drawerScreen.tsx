@@ -60,7 +60,7 @@ export default function SlidingDrawer() {
 
         <Link
           href={
-            "https://drive.google.com/file/d/1V0d8gVmSYkdKnBZpZL9mrjHOH8h66gZR/view"
+            "https://drive.google.com/file/d/1PbMilHa6PQqttuZndjshK95svIpkUbZh/view"
           }
           target="_blank"
           className="cursor-pointer font-courier absolute bottom-8 left-4 text-sm"
