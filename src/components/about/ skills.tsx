@@ -9,13 +9,13 @@ import { useEffect, useState } from "react";
 
 export default function SkillContent() {
   const skills: Skill[] = [
-    { skill: "API Development", percentage: 70 },
+    { skill: "Node.js", percentage: 80 },
+    { skill: "Blockchain [Consensus @ 51% :D]", percentage: 51 },
+    { skill: "TypeScript", percentage: 60 },
+    { skill: "C++", percentage: 50 },
+    { skill: "NextJS", percentage: 50 },
     { skill: "Smart Contract Development", percentage: 40 },
     { skill: "Rust", percentage: 30 },
-    { skill: "TypeScript", percentage: 60 },
-    { skill: "NextJS", percentage: 50 },
-    { skill: "Node.js", percentage: 80 },
-    { skill: "Blockchain", percentage: 60 },
   ];
   return (
     <section className="flex flex-col lg:flex-row items-start gap-8 py-16">

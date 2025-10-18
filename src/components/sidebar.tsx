@@ -1,9 +1,26 @@
+"use client";
+
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { SiLeetcode, SiCodeforces } from "react-icons/si";
 
 export default function SideBar() {
   return (
     <div className="fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center gap-y-4 m-1 z-10">
+      <Link
+        href="https://leetcode.com/u/0Bugs/"
+        className="cursor-pointer"
+        target="_blank"
+      >
+        <SiLeetcode className="text-primary" size={18} />
+      </Link>
+      <Link
+        href="https://codeforces.com/profile/bugFixed"
+        className="cursor-pointer"
+        target="_blank"
+      >
+        <SiCodeforces className="text-primary" size={18} />
+      </Link>
       <Link
         href="https://x.com/saniddhya_10"
         className="cursor-pointer"
@@ -19,7 +36,7 @@ export default function SideBar() {
         <FaGithub />
       </Link>
       <Link
-        href="https://www.linkedin.com/in/saniddhya-dubey-69a9a520b/"
+        href="https://www.linkedin.com/in/saniddhyadubey/"
         className="cursor-pointer"
         target="_blank"
       >
