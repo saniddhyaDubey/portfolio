@@ -12,7 +12,7 @@ export default function IntroContent() {
       <div className="lg:w-1/2 ">
         <p className="font-courier text-lg text-black dark:text-gray-400 leading-relaxed">
           I’m a curios and adaptive backend/api developer who has spent the last
-          1 year working on distributed systems, low level programming in c++, working on blockchain protocols
+          1 year working on distributed systems, low level programming in C++, working on blockchain protocols
           and learning about scalable applications. I have been working with various talented individuals
           from all over the world, learning and growing with them. My
           out-of-the-box thinking and eagerness to dive into technologies has
