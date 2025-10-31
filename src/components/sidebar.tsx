@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { SiLeetcode, SiCodeforces } from "react-icons/si";
+import { SiLeetcode, SiCodeforces, SiDevpost } from "react-icons/si";
 
 export default function SideBar() {
   return (
@@ -20,6 +20,13 @@ export default function SideBar() {
         target="_blank"
       >
         <SiCodeforces className="text-primary" size={18} />
+      </Link>
+      <Link
+        href="https://devpost.com/sdubey5"
+        className="cursor-pointer"
+        target="_blank"
+      >
+        <SiDevpost className="text-primary" size={18} />
       </Link>
       <Link
         href="https://x.com/saniddhya_10"
@@ -44,7 +51,7 @@ export default function SideBar() {
       </Link>
 
       <div className="w-[2px] h-16 bg-black dark:bg-white m-2"></div>
-      <div className="-rotate-90 mt-6">Follow me</div>
+      <div className="-rotate-90 mt-6 font-mono">PROFILES</div>
     </div>
   );
 }

@@ -6,6 +6,10 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    image: "/images/hackathon-kh25.jpg",
+    title: "Drone Challenge - KH25",
+    link: "https://devpost.com/software/nextera-energy-drone-optimization-challenge",
+  },{
     image: "/images/VChat-Server.png",
     title: "VChat - Server",
     link: "https://github.com/Shubhk21/WeChatServer",
