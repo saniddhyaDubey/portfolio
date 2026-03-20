@@ -6,7 +6,7 @@ import { SiLeetcode, SiCodeforces, SiDevpost } from "react-icons/si";
 
 export default function SideBar() {
   return (
-    <div className="fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center gap-y-4 m-1 z-10">
+    <div className="hidden md:flex fixed left-0 top-1/2 transform -translate-y-1/2 flex-col items-center gap-y-4 m-1 z-10">
       <Link
         href="https://leetcode.com/u/0Bugs/"
         className="cursor-pointer"

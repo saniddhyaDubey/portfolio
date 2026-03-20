@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col items-start pl-36 mt-44">
+    <section className="flex flex-col items-start px-6 md:pl-36 mt-28 md:mt-44">
       {/* Big Heading */}
       <h1 className="font-courier text-3xl font-thin text-black dark:text-white">
         I&apos;m Saniddhya
@@ -33,9 +33,7 @@ export default function HeroSection() {
 
       {/* Optional Description */}
       <p className="font-courier text-lg text-black dark:text-gray-400 mt-8">
-        A passionate software engineer, enthusiast in backend and blockchain,
-        <br />
-        based in Charlotte, NC.
+        A passionate software engineer, enthusiast in backend and blockchain, based in Charlotte, NC.
       </p>
 
       {/* Buttons */}

@@ -1,57 +1,147 @@
 "use client";
 
-import SlidingDrawer from "./drawerScreen";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, Moon, Sun, X } from "lucide-react";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/logs", label: "Logs" },
+  { href: "/about", label: "About" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function NavBar() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   if (!mounted) return null;
 
+  const isDark = theme === "dark";
+
   return (
-    <div className="flex p-6 gap-x-10 w-full justify-end">
-      <div
-        className="cursor-pointer"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="size-5 dark:white"
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-black/10 dark:border-white/10">
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        {/* Logo */}
+        <Link
+          href="/"
+          className="font-mono text-lg font-bold tracking-tight hover:opacity-80 transition-opacity"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-          />
-        </svg>
+          sd<span className="text-pink-500">.</span>
+        </Link>
+
+        {/* Desktop Nav Links */}
+        <nav className="hidden md:flex items-center gap-8">
+          {links.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative font-mono text-sm tracking-wide transition-colors group ${
+                  isActive
+                    ? "text-black dark:text-white"
+                    : "text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                }`}
+              >
+                {link.label}
+                <span
+                  className={`absolute -bottom-1 left-0 h-[1.5px] bg-pink-500 transition-all duration-300 ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Right Controls */}
+        <div className="flex items-center gap-2">
+          {/* Resume — desktop only */}
+          <Link
+            href="https://drive.google.com/file/d/1ryH9HUG-xBzNET6gSTrfbi87Jz2IEBAk/view"
+            target="_blank"
+            className="hidden md:inline-block font-mono text-sm px-4 py-1.5 border border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
+          >
+            Resume
+          </Link>
+
+          {/* Theme Toggle */}
+          <button
+            onClick={() => setTheme(isDark ? "light" : "dark")}
+            className="p-2 rounded hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setMenuOpen((v) => !v)}
+            className="md:hidden p-2 rounded hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
-      <div>
-        {/*
-          <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="size-5"
-        >
-          <path
-            fillRule="evenodd"
-            d="M2 6.75A.75.75 0 0 1 2.75 6h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 6.75Zm0 6.5a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
-            clipRule="evenodd"
-          />
-        </svg>
-        */}
-        <SlidingDrawer />
-      </div>
-    </div>
+
+      {/* Mobile Dropdown Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.nav
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className="md:hidden overflow-hidden border-t border-black/10 dark:border-white/10 bg-white/95 dark:bg-black/95 backdrop-blur-md"
+          >
+            <div className="flex flex-col px-6 py-4 gap-1">
+              {links.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={`font-mono text-sm tracking-wide py-3 border-b border-black/5 dark:border-white/5 transition-colors ${
+                      isActive
+                        ? "text-pink-500 font-semibold"
+                        : "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+              <Link
+                href="https://drive.google.com/file/d/1ryH9HUG-xBzNET6gSTrfbi87Jz2IEBAk/view"
+                target="_blank"
+                onClick={() => setMenuOpen(false)}
+                className="font-mono text-sm mt-3 px-4 py-2.5 border border-black dark:border-white text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
+              >
+                Resume ↗
+              </Link>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+    </header>
   );
 }
