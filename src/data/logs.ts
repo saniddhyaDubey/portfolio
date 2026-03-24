@@ -16,6 +16,24 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    date: "2026-03-23",
+    title: "Relaxing weekend, started with leetcode and basic DSA.",
+    body: "One of the best weekend I spent at outer banks with my boys. Back at leetcode, solved two simple questions and spent time understanding Depth-First Search in detail with examples dry run. I'm in love with algorithms.",
+    tags: ["leetcode", "dsa", "life"],
+    more: [
+      {
+        title: "LC 3212 — Count Submatrices With Equal Frequency of X and Y",
+        body: "Simple one. 3 basic condition for each submatrix. reversed it and made a simple if-else with prefix sum logic (upper cell + previous cell) - diagonal cell [left side]. O(n^2) solution and will definitely spend more time understanding the optimal approach.",
+        tags: ["Matrix", "prefix-sum", "medium"],
+      },
+      {
+        title: "LC 122 — Best Time to Buy and Sell Stock II",
+        body: "have already done this before but wanted to come up with a chain of thought. Question already gave all the hints -- each day can be a buy or sell, and can also buy/sell multiple times -> current price can be higher/lower/same than the previous day's. profit only in higher and the sum of all positive difference is the actual biggest profit -> greedy confirmed.",
+        tags: ["greedy", "medium"],
+      },
+    ],
+  },
+  {
     date: "2026-03-19",
     title: "Portfolio updates + 3 more questions. Weekend outing incoming.",
     body: "Updated the portfolio a bit and kept the interview prep going. 3 questions done. Going on a short outing this weekend — balance is part of the process.",
