@@ -11,12 +11,11 @@ export default function IntroContent() {
       {/* Right Column */}
       <div className="lg:w-1/2 ">
         <p className="font-courier text-lg text-black dark:text-gray-400 leading-relaxed">
-          I’m a curios and adaptive backend/api developer who has spent the last
-          1 year working on distributed systems, low level programming in C++, working on blockchain protocols
-          and learning about scalable applications. I have been working with various talented individuals
-          from all over the world, learning and growing with them. My
-          out-of-the-box thinking and eagerness to dive into technologies has
-          allowed me to become an extremely capable developer.
+          I&apos;m not a nerd but I like all those things (mathematics, algorithms, computer, rubik&apos;s cube).
+          My main weapon is C++, writing code is so crazy and cool, learn and build. Only thing I focus on daily is
+          DSA (daily leetcode), System design, some what development (thank you claude).
+          &ldquo;My out-of-the-box thinking and eagerness to dive into technologies has allowed me
+          to become an extremely capable developer&rdquo;, well this what I have been told by people around me.
         </p>
       </div>
     </section>

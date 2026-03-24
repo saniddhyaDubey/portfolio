@@ -6,6 +6,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { SiLeetcode, SiCodeforces, SiDevpost } from "react-icons/si";
 
 const links = [
   { href: "/", label: "Home" },
@@ -138,6 +140,19 @@ export default function NavBar() {
               >
                 Resume ↗
               </Link>
+
+              {/* Social profiles — mobile only */}
+              <div className="mt-4 pt-4 border-t border-black/10 dark:border-white/10">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-3">Profiles</p>
+                <div className="flex items-center gap-5">
+                  <Link href="https://github.com/saniddhyaDubey/" target="_blank" aria-label="GitHub"><FaGithub size={18} /></Link>
+                  <Link href="https://www.linkedin.com/in/saniddhyadubey/" target="_blank" aria-label="LinkedIn"><FaLinkedin size={18} /></Link>
+                  <Link href="https://x.com/saniddhya_10" target="_blank" aria-label="Twitter"><FaTwitter size={18} /></Link>
+                  <Link href="https://leetcode.com/u/0Bugs/" target="_blank" aria-label="LeetCode"><SiLeetcode size={18} /></Link>
+                  <Link href="https://codeforces.com/profile/bugFixed" target="_blank" aria-label="Codeforces"><SiCodeforces size={18} /></Link>
+                  <Link href="https://devpost.com/sdubey5" target="_blank" aria-label="Devpost"><SiDevpost size={18} /></Link>
+                </div>
+              </div>
             </div>
           </motion.nav>
         )}
