@@ -9,7 +9,7 @@ export default function PortfolioSection() {
         <h1 className="text-4xl md:text-5xl font-courier">Portfolio</h1>
         <div className="w-full max-w-2xl h-[1px] bg-gray-500 mt-3"></div>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

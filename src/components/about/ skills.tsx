@@ -50,10 +50,10 @@ function SkillBar({ skill, percentage }: Skill) {
     <div className="space-y-2">
       {/* Skill Name */}
       <div className="flex justify-between">
-        <p className="text-lg font-courier text-black dark:text-white">
+        <p className="text-sm md:text-lg font-courier text-black dark:text-white">
           {skill}
         </p>
-        <span className="text-sm italic font-courier text-black dark:text-white">
+        <span className="text-xs md:text-sm italic font-courier text-black dark:text-white flex-shrink-0 ml-2">
           {percentage}%
         </span>
       </div>
