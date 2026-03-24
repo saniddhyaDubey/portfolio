@@ -25,7 +25,7 @@ export default function SkillContent() {
       </div>
 
       {/* Right Column */}
-      <div className="lg:w-1/2 space-y-6">
+      <div className="w-full lg:w-1/2 space-y-6">
         {skills.map((skill, index) => (
           <SkillBar
             key={index}
