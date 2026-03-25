@@ -16,6 +16,40 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    date: "2026-03-24",
+    title: "One of the best TA lecture, 4 good question, Uber's rate limitng system design blog [Overall Happy :p].",
+    body: "The lecture I TA for is an operating system class. And, today's topic was exploring network model -- OSI, TCP/IP, and how it is implemented in wireshark. Helped so many students to understand the protocols and how to use wireshark, awesome tool. BTW, job market still sucks, why it is so damn hard to get a job. Nevermind, the rant stays on, but did solved good 4 leetcode questions.",
+    tags: ["leetcode", "dsa", "TA", "daily-routine"],
+    more: [
+      {
+        title: "LC 383 - Ransom Note",
+        body: "straight forward question of hashtable and just checked the frequency -> space is currently o(n) where n is the size of string magazine. but, constraints says only lowercase so use a vector of 26 -> space complexity o(26).",
+        tags: ["hashtable", "counting", "easy"],
+      },
+      {
+        title: "LC 1695 - Maximum Erasure Value",
+        body: "pretty easy to understand: single operation allowed of deleting a subarray which has unique elements and max sum i.e. score. uniquieness made the question more inclined towards sliding window for me. using hashtable and sliding window a o(n) i.e. single pass solution works properly.",
+        tags: ["sliding window", "hashtable", "medium"],
+      },
+      {
+        title: "LC 970 - Powerful Integers",
+        body: "a really good math question. for given x and y, we get the upper bound of log(bound) to the base x and base y for each x & y. lower bound remains 0 as per the question. for each pair from x and y, calculate the sum and append if the condition matches. LOG really helps in these kind of questions.",
+        tags: ["Maths", "medium"],
+      },
+      {
+        title: "LC 75 - Sort Colors",
+        body: "one of my favorite algorithm. the underlying assumption and implementation is so cool which makes it really easy to understand and very powerful to visualize in your head. the chain of thought was very simple: 3 imaginary boundary (one for 0s, one for 1s and one for 2s) -> the in between was unsorted and we move based on the value. But, there's a very subtle concept of why we increase mid when swapping with left and not increasing mid when swapping with right. We are sure the element at left is already processed by mid before so even swapping the worst case is it's 1 which we skip anyway. but, the element when swapped with right is unknown and that's why we check that again.",
+        tags: ["Dutch national flag algorithm", "medium"],
+      },
+      {
+        title: "Uber’s Rate Limiting System",
+        body: "Design a Rate Limiter, a question asked in an interview and you know the pieces but no solid connection to drive the interview and ace it. This blog really helps, why Uber implemented the rate limiter in first place (problem statment), which algorithms it used (working), how it changed to server 1M+ DAU (scalability), and how it's made fault tolerant (reliability). Apart from this, there dynamic drop ratio calculation and a GRL (Global Rate Limiter) concept was very interesting. Still many things were new to me, will definitely give more time to this.",
+        link: "https://www.uber.com/blog/ubers-rate-limiting-system/",
+        tags: ["system design learnings", "easy-medium"],
+      },
+    ],
+  },
+  {
     date: "2026-03-23",
     title: "Relaxing weekend, started with leetcode and basic DSA.",
     body: "One of the best weekend I spent at outer banks with my boys. Back at leetcode, solved two simple questions and spent time understanding Depth-First Search in detail with examples dry run. I'm in love with algorithms.",
