@@ -16,6 +16,50 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    date: "2026-03-27",
+    title: "Was fearing a medium question -- finally faced it even though i wrote the naive solution.",
+    body: "there are times when you try to avoid looking anything about the question and just starts. I looked at the tag by mistake and was somehow avoiding it. well, time to face it",
+    tags: ["leetcode", "dsa"],
+    more: [
+      {
+        title: "LC 93 - Restore IP Addresses",
+        body: "for the given string of number, return the list of all possible ip addresses. well few constraints i was able to think of were like: a. every segment in the IP can have atmax of length 3. b. 3 dots with each dots in a fixed range. c. start with comparing the first segment and if valid then move forward or else early prunning. Using a 3 loop solution, was able to come up with a solution by doing manual string comparison. Can definitely make it better, will get back to this next week with a fresh brain. took a lot of time to code!!!",
+        tags: ["backtracking", "strings", "medium"],
+      }
+    ],
+  },
+  {
+    date: "2026-03-26",
+    title: "TA lecture and 1 question -- job market was hard on me today!!",
+    body: "Was in touch with 2 HRs and both ghosted at the same time. It's crazy to even think about getting a job, ughhh. A simple tree question to make me feel good.",
+    tags: ["leetcode", "dsa", "TA", "daily-routine"],
+    more: [
+      {
+        title: "LC 112 - Path Sum",
+        body: "simple dfs call and calculating the path sum from root to each leaf and checking with given target. pretty simple. but i want to dive more in trees algo, there are so many variation to a simple dfs.",
+        tags: ["trees", "dfs", "easy"],
+      }
+    ],
+  },
+  {
+    date: "2026-03-25",
+    title: "casual day -- grinding lc with ease",
+    body: "learned more about graphs and its proof. 2 basic questions for diagonal traversal.",
+    tags: ["leetcode", "dsa"],
+    more: [
+      {
+        title: "LC 766 - Toeplitz Matrix",
+        body: "have to check all the elements same in each diagonal from top left to bottom right. a simple 2 loop solution.",
+        tags: ["matrix", "easy"],
+      },
+      {
+        title: "LC 498 - Diagonal Traverse",
+        body: "This one was kinda nice. I started with brute force. going cell by cell and changing direction. Two direction calculation everytime. Did solved but could have done better. Will get back to this question in a few days to improve the chain of thought. will def share.",
+        tags: ["matrix", "medium"],
+      },
+    ],
+  },
+  {
     date: "2026-03-24",
     title: "One of the best TA lecture, 4 good question, Uber's rate limitng system design blog [Overall Happy :p].",
     body: "The lecture I TA for is an operating system class. And, today's topic was exploring network model -- OSI, TCP/IP, and how it is implemented in wireshark. Helped so many students to understand the protocols and how to use wireshark, awesome tool. BTW, job market still sucks, why it is so damn hard to get a job. Nevermind, the rant stays on, but did solved good 4 leetcode questions.",
