@@ -16,6 +16,45 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    date: "2026-03-30",
+    title: "New week, same old LC hustle and learning more DSA",
+    body: "I solved this question earlier but I'm realizing more and more that I never fully spend time on thinking more. Chain of thought is what make someone way more a damn good problem solver than an avg LC hustler. Today's DSA class was fun, revised Dijkstra's algo.",
+    tags: ["daily routine", "leetcode", "DSA"],
+    more: [
+      {
+        title: "LC 50 - Pow(x,n)",
+        body: "I will share the final learnings of this question. So, the chain of thought should look something like: multiplication is the basic operation -> n is very larger -> o(n) is slow -> can optimize basic operation by x^(n/2) * x^(n/2) = x^n -> time complexity is o(log n) -> negative n ~ 1/(x^n) -> even n ~ log(n) ops -> odd n ~ log(n-1) + 1 ops -> Recursive solution -> o(log n) space complexity. Did implemented till here, but still final step is remaining. I can't believe I am spending more time on these things, more than ever and i hope it pays off. Will get back to this question and complete the remaining iterative approach tomorrow itself.",
+        tags: ["math", "recursion", "medium"],
+      }
+    ],
+  },
+  {
+    date: "2026-03-29",
+    title: "Sunday -- completed school stuff & cleared the Diagonal Traverse question.",
+    body: "I love weekends mainly because I spent the entire day in library all by myself, completing the pending works and clearing the slate for the next week.",
+    tags: ["daily routine", "leetcode"],
+    more: [
+      {
+        title: "LC 498 - Diagonal Traverse [againnnnnn!]",
+        body: "last time i did the question cell by cell and the code quality was very bad. a lot of conditions to handle and a lot of things to manage. my logic got wayyyy more complicated. so, another approach was how about directly going diagonally. so, one thing i didn't put much thought to, all the diagonal directions are same (top-right to bottom-left), and each MxN matrix has total (M+N-1) diagonals in total. well guess what, we can actually generalize all the formulas for row, col based on diagonal number, M and N. Finally the question just boiled down to 2 nested loop and traverse the diagonal one by one and add to a vector. DAMN THIS WAS GOOD!!!!!",
+        tags: ["diagonal traverse", "matrix", "medium"],
+      }
+    ],
+  },
+  {
+    date: "2026-03-28",
+    title: "Started my LC mock series, System design weekends again.",
+    body: "I am now fully practiciing DSA end-to-end, like a FAANG level interview. First mock on trees question, and I did bad. Lots of things to improve, mainly thinking more about the questions to ask to get more clarification from the interviewer. First goal to achieve in next 5 mocks. Atleast get comfortable with this.",
+    tags: ["DSA", "System Design"],
+    more: [
+      {
+        title: "Understanding how to approach LLD questions optimally",
+        body: "Started with coding 2 basic LLD questions -- TicTacToe, Sudoku. Now, started with Designing an elevator system. 90 mins straight deep discussion with my friend to understand the chain of thoughts for LLD, what things to cover, how to unfold the problem into a well-defined constraint based question to tackle under 60 mins.",
+        tags: ["LLD", "system design", "easy-medium"],
+      }
+    ],
+  },
+  {
     date: "2026-03-27",
     title: "Was fearing a medium question -- finally faced it even though i wrote the naive solution.",
     body: "there are times when you try to avoid looking anything about the question and just starts. I looked at the tag by mistake and was somehow avoiding it. well, time to face it",
