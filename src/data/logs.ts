@@ -16,6 +16,67 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    date: "2026-04-04",
+    title: "MY FIRST PR TO OSS; BASIC DP QUESTION CRACKED BY MYSELF; A GOOD DAY I NEEDED SO BADLY ;)",
+    body: "Added a new module, python-hdwallet, in the bitcoin-fuzz repo for the bip32_master_keygen fuzz. This is simply checking the extended_key generation method and does all the implementation (9 modules including the one I added) achieving a concensus on the output. If yes then good, or else a bug to solve ;). Opened a PR, I wish it gets merge sooooooon. Will keep posted here FS.",
+    tags: ["daily routine", "leetcode", "DSA", "SoB'26"],
+    more: [
+      {
+        title: "LC 96 - Unique Binary Search Trees",
+        body: "Well I literally took 40 mins to understand the intuition. I got the correct chain of thoughts, but ig I messed at the end to connect the dots, so had to took the help of claude to get the final equation. The question was straight forward. Understood the brute force but still need to verify if that's the actual one. For N nodes, max BST I can have is n!, I get that. But the question ask for unique structure. So, for n=3, the sequence 231 and 213 returns the same tree structure. Then, I kept thinking, trying to draw out with pencil to understand more. I get to the point, that for any value N, the number is actually related from 1 to N. For, 1 we have 1 node -> 1 tree. 2 node, we add 1 node once to the left of tree#1 and once to the right of tree#2. So, total 2 trees. For N=3, we add 1 node once to the left of tree#2#1 and once to the right of tree#2#1. Same for tree#2#2. So, total 4 trees till now and finally adding 2 nodes to tree#1. Final value-5 in total. This is a basic DP question. But, I was just able to get till here. Got to learn about \"Catalan Numbers\", and learned about the recurrence relations of it. T(N)=Summ of T(i-1)*(n-i); and T(0)=1. The logic is, everything less than i goes to the left subtree → (i - 1) nodes AND everything greater than i goes to the right subtree → (n - i) nodes.",
+        tags: ["trees", "DP", "Maths", "medium"],
+      }
+    ],
+  },
+  {
+    date: "2026-04-03",
+    title: "Got disappointed ~ quiet day but some leetcode and a bit Bitcoin-Fuzz!!!!",
+    body: "The task I took shook me by surprise when I was working on it today. The competition on this was is the highest among all the orgs, and I like this one only. Why god why? literally, every other org feels so aloof, IDK what to even contribute. They are so niche I feel. But still, went through the day and learned a lot about myself.",
+    tags: ["daily routine", "leetcode", "DSA", "SoB'26"],
+    more: [
+      {
+        title: "LC 655 - Print Binary Tree",
+        body: "My friend gave the mock on this one too. Was trying to code and checking if I can solve this in under 5 mins. Actually, I did just some typos I did while coding. Bruuuuuuuuuuh, SMH. But, yeah the question was very straight forward. Some normal calculation and pass on along the dfs call for each child. That's it. Already intialized the matrix with empty string to avoid keeping track of null values. Simple question - IDK why LC gave a medium tag. TC-o(n), SC-o(n)~Recursion stack + o(n*n) 2D-matrix.",
+        tags: ["tree", "dfs", "medium"],
+      },
+      {
+        title: "LC 129 - Sum Root to Leaf Numbers",
+        body: "Trying to work more on trees and this question was from the leetgoat sheet I am speedwalking (LOL). Understood the question, simple DFS call till leaf node and keep pushing the numbers formed in a list. After completing the dfs call, return the sum of list. One new thing I understood, till now I was doing calculation of leaf nodes at the first line [if(!node) return -1] -> with this being my base case. But, we can also work on leaf node calculation after the child values. Overall the same thing, but just a different perspective I found to keep things straight in my head. TC-o(n); SC-[o(n)~recursion stack, o(h*k)~h is the height of the tree and k is the number of leaf nodes]. IDK why i used a list. I could have avoided that by just maintaing a global variable and keep adding the numbers at leaf node. Will update the code ASAP.",
+        tags: ["tree", "dfs", "medium"],
+      }
+    ],
+  },
+  {
+    date: "2026-04-02",
+    title: "Leetcode, more Bitcoin-Fuzz, mock series #2 not getting a job (:",
+    body: "It won't be wrong to say that I'm in love with bitcoin-fuzz for now. This is new but I just can't stop myself thinking about it. Well, I am aiming to open my first PR in oss. C'mon cheer me up! Learning more about differential fuzzing and how to write good test cases. Not unit test, but even for generating using a fuzzer, you have to set boundaries. The goal is to write or generate those which covers the max code (max coverage). Good to know that, but yeah i still lack that skill -- working on it.",
+    tags: ["daily routine", "leetcode", "DSA", "SoB'26"],
+    more: [
+      {
+        title: "Kth Ancestor of a Node",
+        body: "Gave a 45 mins mock on this question. Starting with expanding the question and getting as many inputs from the interviewer as possible, reframed the question in my own words to confirm my understanding and fill any gaps here only to avoid mistakes at later stages. Then, did a quick dry run on a sample input of my own. Based on that started with my brute force approach - maintaining a list of ancestor for each node until find the given node. When we find the given node -> return n-k value from the list. Pretty simple approach. TC-o(n); SC-[o(n)~Recursion stack + o(n)~list of ancestors]. Interviewer asked to optimize the storage. Told him about maintaining a list of size K and return the first value as soon as find the given node. But, still not a good solution. Now, went for the better approach. Analogy is just how we calculate height of the tree in a dfs call ~ will keeping traversing using DFS to find the node. As soon as we find one, keep returning to the parent for K times using a counter. As we hit the counter==k, return the ancestor. TC-o(n);SC-o(n) only the recursion stack. Coded but wrote a very bad code (a lot of redundancy not a production level ~ SMH, a lot to improve). Also, messed up in 1 follow up question. Overall okayish, will see any further improvements in #3.",
+        tags: ["tree", "dfs", "medium"],
+      },
+      {
+        title: "LC 1026 - Maximum difference between node and ancestor",
+        body: "Took a mock of my friend on this question, and he literally aced it. Pretty simple question. I just solved to see if i still remember LOL. But yeah, the simple idea was to pass max, min from each parent to its child and keep on updating at every node. On every lead node, calculate the max difference and keep in a global variable. At the end, it is guaranteed to get the optimal answer - cause the min, max value gets updated through each root-node path and the value calculation is done at every leaf node. TC - o(n), SC - o(n) recursion stack only.",
+        tags: ["tree", "dfs", "medium"],
+      }
+    ],
+  },
+  {
+    date: "2026-04-01",
+    title: "Continuing SoB'26 -- the struggle is real",
+    body: "Well finally loved this one github repo I learned about a lot (5 hours straight with my buddies -- bitcoin stack exchange, claude. Bitcoin-Fuzz, an oss which do differential fuzzing on different bitcoin modules and implementation. Sooooooo cool, right ??? Well, it took me a lot of water and some markers and a white board to understand everything about it. So basically, when we write a function and we need to test it, we write unit test out of our mind. We can barely think of 10 different test cases which actually test the code. This is where fuzzing comes in, we start with a corpus (an input) and there's a mutator -- mutates the corpus and creates new input out of it. For example, flipping bits, adding random byte, making it all zeros, etc. And it does over a million times and test our code. Still coooooool, for me atleast. This was all new. This fuzzing happens for different things -- Property Based Testing (PBT), unit test with these inputs, etc. PBT is basically you test a property for a specific functions. For example -- you functions guarantees that for any input the output is of fixed size. So, we test with null values, close to 0, close to half, close to the output size, and so on. It will make sense once you try it out. Trust me it is super cool!!!!",
+    tags: ["SoB'26", "oss"],
+  },
+  {
+    date: "2026-03-31",
+    title: "Summer of Bitcoin'26 : Proposal round begins",
+    body: "Started with knowing about the different bitcoin organizations and what work they are doing. This was one of the toughest thing I did. Working in bitcoin development, those github repos were literally a dark forest for me on day-1. Selecting one to start with, I literally had to take a day to understand how things work in open source software development.",
+    tags: ["SoB'26", "oss"]
+  },
+  {
     date: "2026-03-30",
     title: "New week, same old LC hustle and learning more DSA",
     body: "I solved this question earlier but I'm realizing more and more that I never fully spend time on thinking more. Chain of thought is what make someone way more a damn good problem solver than an avg LC hustler. Today's DSA class was fun, revised Dijkstra's algo.",
