@@ -18,12 +18,12 @@ export const logs: LogEntry[] = [
   {
     date: "2026-04-04",
     title: "MY FIRST PR TO OSS; BASIC DP QUESTION CRACKED BY MYSELF; A GOOD DAY I NEEDED SO BADLY ;)",
-    body: "Added a new module, python-hdwallet, in the bitcoin-fuzz repo for the bip32_master_keygen fuzz. This is simply checking the extended_key generation method and does all the implementation (9 modules including the one I added) achieving a concensus on the output. If yes then good, or else a bug to solve ;). Opened a PR, I wish it gets merge sooooooon. Will keep posted here FS.",
+    body: "Added a new module, python-hdwallet, in the bitcoin-fuzz repo for the bip32_master_keygen fuzz. This is simply checking the extended_key generation method and does all the implementation (9 modules including the one I added) achieving a consensus on the output. If yes then good, or else a bug to solve ;). Opened a PR, I wish it gets merge sooooooon. Will keep posted here FS.",
     tags: ["daily routine", "leetcode", "DSA", "SoB'26"],
     more: [
       {
         title: "LC 96 - Unique Binary Search Trees",
-        body: "Well I literally took 40 mins to understand the intuition. I got the correct chain of thoughts, but ig I messed at the end to connect the dots, so had to took the help of claude to get the final equation. The question was straight forward. Understood the brute force but still need to verify if that's the actual one. For N nodes, max BST I can have is n!, I get that. But the question ask for unique structure. So, for n=3, the sequence 231 and 213 returns the same tree structure. Then, I kept thinking, trying to draw out with pencil to understand more. I get to the point, that for any value N, the number is actually related from 1 to N. For, 1 we have 1 node -> 1 tree. 2 node, we add 1 node once to the left of tree#1 and once to the right of tree#2. So, total 2 trees. For N=3, we add 1 node once to the left of tree#2#1 and once to the right of tree#2#1. Same for tree#2#2. So, total 4 trees till now and finally adding 2 nodes to tree#1. Final value-5 in total. This is a basic DP question. But, I was just able to get till here. Got to learn about \"Catalan Numbers\", and learned about the recurrence relations of it. T(N)=Summ of T(i-1)*(n-i); and T(0)=1. The logic is, everything less than i goes to the left subtree → (i - 1) nodes AND everything greater than i goes to the right subtree → (n - i) nodes.",
+        body: "Well I literally took 40 mins to understand the intuition. I got the correct chain of thoughts, but ig I messed the end to connect the dots, so had to took the help of claude to get the final equation. The question was straight forward. Understood the brute force but still need to verify if that's the actual one. For N nodes, max BST I can have is n!, I get that. But the question ask for unique structure. So, for n=3, the sequence 231 and 213 returns the same tree structure. Then, I kept thinking, trying to draw out with pencil to understand more. I get to the point, that for any value N, the number is actually related from 1 to N. For, 1 we have 1 node -> 1 tree. 2 node, we add 1 node once to the left of tree#1 and once to the right of tree#1. So, total 2 trees. For N=3, we add 1 node once to the left of tree#2#1 and once to the right of tree#2#1. Same for tree#2#2. So, total 4 trees till now and finally adding 2 nodes to tree#1. Final value-5 in total. This is a basic DP question. But, I was just able to get till here. Got to learn about \"Catalan Numbers\", and learned about the recurrence relations of it. T(N)=Sum of T(i-1)*(n-i) and T(0)=1. The logic is, everything less than i goes to the left subtree → (i - 1) nodes AND everything greater than i goes to the right subtree → (n - i) nodes.",
         tags: ["trees", "DP", "Maths", "medium"],
       }
     ],
@@ -31,7 +31,7 @@ export const logs: LogEntry[] = [
   {
     date: "2026-04-03",
     title: "Got disappointed ~ quiet day but some leetcode and a bit Bitcoin-Fuzz!!!!",
-    body: "The task I took shook me by surprise when I was working on it today. The competition on this was is the highest among all the orgs, and I like this one only. Why god why? literally, every other org feels so aloof, IDK what to even contribute. They are so niche I feel. But still, went through the day and learned a lot about myself.",
+    body: "The task I took shook me by surprise when I was working on it today. The competition on this is the highest among all the orgs, and I like this one only. Why god why? literally, every other org feels so aloof, IDK what to even contribute. They are so niche I feel. But still, went through the day and learned a lot about myself.",
     tags: ["daily routine", "leetcode", "DSA", "SoB'26"],
     more: [
       {
@@ -48,7 +48,7 @@ export const logs: LogEntry[] = [
   },
   {
     date: "2026-04-02",
-    title: "Leetcode, more Bitcoin-Fuzz, mock series #2 not getting a job (:",
+    title: "Leetcode, more Bitcoin-Fuzz, mock series #2 AND not getting a job (:",
     body: "It won't be wrong to say that I'm in love with bitcoin-fuzz for now. This is new but I just can't stop myself thinking about it. Well, I am aiming to open my first PR in oss. C'mon cheer me up! Learning more about differential fuzzing and how to write good test cases. Not unit test, but even for generating using a fuzzer, you have to set boundaries. The goal is to write or generate those which covers the max code (max coverage). Good to know that, but yeah i still lack that skill -- working on it.",
     tags: ["daily routine", "leetcode", "DSA", "SoB'26"],
     more: [
@@ -59,7 +59,7 @@ export const logs: LogEntry[] = [
       },
       {
         title: "LC 1026 - Maximum difference between node and ancestor",
-        body: "Took a mock of my friend on this question, and he literally aced it. Pretty simple question. I just solved to see if i still remember LOL. But yeah, the simple idea was to pass max, min from each parent to its child and keep on updating at every node. On every lead node, calculate the max difference and keep in a global variable. At the end, it is guaranteed to get the optimal answer - cause the min, max value gets updated through each root-node path and the value calculation is done at every leaf node. TC - o(n), SC - o(n) recursion stack only.",
+        body: "Took a mock of my friend on this question, and he literally aced it. Pretty simple question. I just solved to see if i still remember LOL. But yeah, the simple idea was to pass max, min from each parent to its child and keep on updating at every node. On every leaf node, calculate the max difference and keep in a global variable. At the end, it is guaranteed to get the optimal answer - cause the min, max value gets updated through each root-node path and the value calculation is done at every leaf node. TC - o(n), SC - o(n) recursion stack only.",
         tags: ["tree", "dfs", "medium"],
       }
     ],
@@ -67,7 +67,7 @@ export const logs: LogEntry[] = [
   {
     date: "2026-04-01",
     title: "Continuing SoB'26 -- the struggle is real",
-    body: "Well finally loved this one github repo I learned about a lot (5 hours straight with my buddies -- bitcoin stack exchange, claude. Bitcoin-Fuzz, an oss which do differential fuzzing on different bitcoin modules and implementation. Sooooooo cool, right ??? Well, it took me a lot of water and some markers and a white board to understand everything about it. So basically, when we write a function and we need to test it, we write unit test out of our mind. We can barely think of 10 different test cases which actually test the code. This is where fuzzing comes in, we start with a corpus (an input) and there's a mutator -- mutates the corpus and creates new input out of it. For example, flipping bits, adding random byte, making it all zeros, etc. And it does over a million times and test our code. Still coooooool, for me atleast. This was all new. This fuzzing happens for different things -- Property Based Testing (PBT), unit test with these inputs, etc. PBT is basically you test a property for a specific functions. For example -- you functions guarantees that for any input the output is of fixed size. So, we test with null values, close to 0, close to half, close to the output size, and so on. It will make sense once you try it out. Trust me it is super cool!!!!",
+    body: "Well finally loved this one github repo I learned about a lot (5 hours straight with my buddies -- bitcoin stack exchange, claude). Bitcoin-Fuzz, an oss which do differential fuzzing on different bitcoin modules and implementation. Sooooooo cool, right ??? Well, it took me a lot of water and some markers and a white board to understand everything about it. So basically, when we write a function and we need to test it, we write unit test out of our mind. We can barely think of 10 different test cases which actually test the code. This is where fuzzing comes in, we start with a corpus (an input) and there's a mutator -- mutates the corpus and creates new input out of it. For example, flipping bits, adding random byte, making it all zeros, etc. And it does over a million times and test our code. Still coooooool, for me atleast. This was all new. This fuzzing happens for different things -- Property Based Testing (PBT), unit test with these inputs, etc. PBT is basically you test a property for a specific functions. For example -- your functions guarantees that for any input the output is of fixed size. So, we test with null values, close to 0, close to half, close to the output size, and so on. It will make sense once you try it out. Trust me it is super cool!!!!",
     tags: ["SoB'26", "oss"],
   },
   {
@@ -196,7 +196,7 @@ export const logs: LogEntry[] = [
   {
     date: "2026-03-23",
     title: "Relaxing weekend, started with leetcode and basic DSA.",
-    body: "One of the best weekend I spent at outer banks with my boys. Back at leetcode, solved two simple questions and spent time understanding Depth-First Search in detail with examples dry run. I'm in love with algorithms.",
+    body: "One of the best weekend I spent at outer banks. Back at leetcode, solved two simple questions and spent time understanding Depth-First Search in detail with examples dry run. I'm in love with algorithms.",
     tags: ["leetcode", "dsa", "life"],
     more: [
       {
