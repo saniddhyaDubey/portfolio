@@ -14,27 +14,27 @@ export default function SideBar() {
       >
         <SiLeetcode className="text-primary" size={18} />
       </Link>
-      <Link
+      {/* <Link
         href="https://codeforces.com/profile/bugFixed"
         className="cursor-pointer"
         target="_blank"
       >
         <SiCodeforces className="text-primary" size={18} />
-      </Link>
-      <Link
+      </Link> */}
+      {/* <Link
         href="https://devpost.com/sdubey5"
         className="cursor-pointer"
         target="_blank"
       >
         <SiDevpost className="text-primary" size={18} />
-      </Link>
-      <Link
+      </Link> */}
+      {/* <Link
         href="https://x.com/saniddhya_10"
         className="cursor-pointer"
         target="_blank"
       >
         <FaTwitter />
-      </Link>
+      </Link> */}
       <Link
         href="https://github.com/saniddhyaDubey/"
         className="cursor-pointer"

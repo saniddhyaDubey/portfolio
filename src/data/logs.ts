@@ -16,6 +16,30 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    date: "2026-04-06",
+    title: "Cleared 2 LC backlog; SoB'26-new org dive plan; Greedy algorithms; Cold Outreach for JOBSSSS!",
+    body: "ASmap, a new org I found today. Their problem is so sick. I realize, people are working on such amazing things and I just can't stop learning about it. Will talk about it more in upcoming days. Revised and also learned some new things about greedy algorithms, Prim's and Kruskal's, used in deriving Minimum-Cost Spanning Trees.",
+    tags: ["daily routine", "leetcode", "DSA", "SoB'26"],
+    more: [
+      {
+        title: "LC 93 - Restore IP Addresses",
+        body: "My solution was not bad but was very redundant. Lot of bad code written. And, the final code was much simpler, using backtracking. Base case: 4 segments and the final index is at the last index of string s. keep a track of the current string, and keep checking the number in the valid range. This was so straight forward. I should have thought about this in my first attempt. SMH!!!",
+        tags: ["strings", "Backtracking", "medium"],
+      },
+      {
+        title: "LC 50 - Pow(x,n)",
+        body: "Last time solved this using recursion with a space complexity of o(log n) as the recursion stack. We can remove that by using bit manipulation. The insight is, binary bits of n tell which power of x to multiply -- simply iterate bits, square x at each step. That's it.",
+        tags: ["Maths", "Bit Manipulation", "medium"],
+      }
+    ],
+  },
+  {
+    date: "2026-04-05",
+    title: "System Design HLD#1, SoB'26 more learning -- DOING OKAYY",
+    body: "Started with sunday series HLD discussion with one of my friend. We talked about basic client-server setup and scaling it to serve 1M DAU. Things like cache, load balancer, database and types of it, replication and sharding, CDN. Apart from this, worked on documenting my learnings for SoB'26. Learned howa new module registration takes place and documenting that for my proposal.",
+    tags: ["daily routine", "SoB'26", "System Design"],
+  },
+  {
     date: "2026-04-04",
     title: "MY FIRST PR TO OSS; BASIC DP QUESTION CRACKED BY MYSELF; A GOOD DAY I NEEDED SO BADLY ;)",
     body: "Added a new module, python-hdwallet, in the bitcoin-fuzz repo for the bip32_master_keygen fuzz. This is simply checking the extended_key generation method and does all the implementation (9 modules including the one I added) achieving a consensus on the output. If yes then good, or else a bug to solve ;). Opened a PR, I wish it gets merge sooooooon. Will keep posted here FS.",
