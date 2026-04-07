@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { SiLeetcode, SiCodeforces, SiDevpost } from "react-icons/si";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 export default function SideBar() {
   return (
