@@ -77,7 +77,7 @@ export default function NavBar() {
         <div className="flex items-center gap-2">
           {/* Resume — desktop only */}
           <Link
-            href="https://drive.google.com/file/d/1ryH9HUG-xBzNET6gSTrfbi87Jz2IEBAk/view"
+            href="https://drive.google.com/file/d/1t6j9C6ZQ9S39qF_QHtiRg4L-HYm-KbqX/view?usp=drive_link"
             target="_blank"
             className="hidden md:inline-block font-mono text-sm px-4 py-1.5 border border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
           >
@@ -133,7 +133,7 @@ export default function NavBar() {
                 );
               })}
               <Link
-                href="https://drive.google.com/file/d/1ryH9HUG-xBzNET6gSTrfbi87Jz2IEBAk/view"
+                href="https://drive.google.com/file/d/1t6j9C6ZQ9S39qF_QHtiRg4L-HYm-KbqX/view?usp=drive_link"
                 target="_blank"
                 onClick={() => setMenuOpen(false)}
                 className="font-mono text-sm mt-3 px-4 py-2.5 border border-black dark:border-white text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
