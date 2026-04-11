@@ -6,7 +6,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    image: "/images/btc-blocl-explorer.jpeg",
+    image: "/images/btc-block-explorer.jpeg",
     title: "sherlock: block analyzer",
     link: "https://sherlock-uljh.onrender.com/",
   },
