@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import { projects } from "./projectList";
+import { projects } from "../../data/projectList";
 import React from "react";
 
 export default function PortfolioSection() {

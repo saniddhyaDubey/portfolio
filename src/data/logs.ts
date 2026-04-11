@@ -16,6 +16,45 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    date: "2026-04-10",
+    title: "More Redis work, 1 LC after 2 days, deployed two projects on render !",
+    body: "Implemented Exponentially Weighted Moving Average (EWMA) algorithm for redis and migrated the singleton pattern to a strategy pattern to use either EWMA or sliding window algorithm on custom services. Well, sliding window is good, but it consumes a lot of space in memory when the number of clients are wayy more. Tested and it's working fine, now will implement unit and integration test. My eyes are set for a really good issue to cover almost 90% of the codebase. Will talk about it soon, a lot of things to learn for that. Solved 1 LC, and deployed two projects (btc realted) on render. 30 days to go for graduation!!!",
+    tags: ["SoB'26", "leetcode", "DSA", "redis"],
+    more: [
+      {
+        title: "LC 113 - Path Sum II",
+        body: "This was to be done more easily via backtracking but I feel I'm more comfortable with DFS now, intuition and syntax wise. Same logic, but just keep a list of all the nodes visited during a path from root-leaf. If sum reaches target, add the path to the answer. Return answer at the end. Time complexity remains - o(n) and space complexity is worst case o(n) if asked. but since the binary tree can be of any form, there's no fixed.",
+        tags: ["Trees", "DFS", "Backtracking", "medium"],
+      },
+    ],
+  },
+  {
+    date: "2026-04-09",
+    title: "My first PR merged with nostream and working on second one. Also, PR of btc-fuzz is now officially under review.",
+    body: "So, my first PR is directly merged to production. I took this one, to cover a good amount of codebase. Creating a doc to help users who implement nostream as relay to allow multiple ACL on redis. I learned all about redis implementation in nostream, what commands are used, a custom configuration setup, what problems you can face and a troubleshooting guide. Ran and verified. Feels good",
+    tags: ["SoB'26", "nostream", "redis"],
+  },
+  {
+    date: "2026-04-08",
+    title: "Loving OSS and apart from btc-fuzz, NOSTREAM - WHAT A PROJECT",
+    body: "So, gave a codeforces virtual contest to practice on real life problem statements. CF makes easy questions hard. Solved A-C for a div 4 contest, CF needs a lot of practice fr man. Also, started with this new repo -- nostream, it is a nostr relay implementation for everything. NOSTR is basically a protocol to do anything decentralized i.e. chatting, playing games, more and more apps are coming. The core component is relay (servers), which implements those protocol and everything is event based. TRUST ME VERY COOL.",
+    tags: ["daily routine", "codeforces", "CP", "SoB'26"],
+  },
+  {
+    date: "2026-04-07",
+    title: "A Hard Question tackled, started with some basics of bit manipulatio too -- learning more about btc-fuzz!!",
+    body: "Normal day with learning about sparse table, binary lifting, and how it helps solving some interesting questions. Also, learned about basics of bit manipulation to solve question more easily. Nothing much to add, SoB keeps going side by side!",
+    tags: ["leetcode", "DSA", "SoB'26"],
+    more: [
+      {
+        title: "LC 1483 - Kth Ancestor of a Tree Node",
+        body: "I gave the mock to this question, but that was wayyy different. This question provides us a list of size n where ith element is the parent of node i. Even if I implement the same solution using DFS call, it will throw TLE. So, I implemented a matrix solution, which was basically the same thing I did but I just computated it before hand. The gold was binary lifting. The key insight was computing Kth parent as a sumation of power of 2s. So, for any Node X, the highest parent is log(n), the height of tree. We pre-compute this for each node using previous parent as the jumping point. For example, if Y is the 1st parent of node X, and Z is the 1st parent of node Y, then Z is the 2nd parent of node X. Using this intuition, we calculate all the nodes and return the answer. This was crazyyyy. DP is soooo cool, apart from development, I'll spend my next few days learning more about this and try build intuition around this. Also, linked a cool article to read more!!!",
+        tags: ["Trees", "Dynamic Programming", "hard"],
+        link: "https://cp-algorithms.com/data_structures/sparse-table.html"
+      },
+    ],
+  },
+  {
     date: "2026-04-06",
     title: "Cleared 2 LC backlog; SoB'26-new org dive plan; Greedy algorithms; Cold Outreach for JOBSSSS!",
     body: "ASmap, a new org I found today. Their problem is so sick. I realize, people are working on such amazing things and I just can't stop learning about it. Will talk about it more in upcoming days. Revised and also learned some new things about greedy algorithms, Prim's and Kruskal's, used in deriving Minimum-Cost Spanning Trees.",

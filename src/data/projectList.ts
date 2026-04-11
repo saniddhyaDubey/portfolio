@@ -6,10 +6,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    image: "/images/btc-blocl-explorer.jpeg",
+    title: "sherlock: block analyzer",
+    link: "https://sherlock-uljh.onrender.com/",
+  },
+  {
+    image: "/images/bitcoin-psbt-builder.jpeg",
+    title: "PSBT-Builder",
+    link: "https://psbtforge.onrender.com/",
+  },
+  {
     image: "/images/hackathon-kh25.jpg",
     title: "Drone Challenge - KH25",
     link: "https://devpost.com/software/nextera-energy-drone-optimization-challenge",
-  },{
+  },
+  {
     image: "/images/VChat-Server.png",
     title: "VChat - Server",
     link: "https://github.com/Shubhk21/WeChatServer",

@@ -58,7 +58,7 @@ export default function SlidingDrawer() {
           </ul>
         </nav>
 
-        <Link
+        {/* <Link
           href={
             "https://drive.google.com/file/d/1ryH9HUG-xBzNET6gSTrfbi87Jz2IEBAk/view"
           }
@@ -66,7 +66,7 @@ export default function SlidingDrawer() {
           className="cursor-pointer font-courier absolute bottom-8 left-4 text-sm"
         >
           My Resume
-        </Link>
+        </Link> */}
       </motion.div>
     </>
   );

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import { Project } from "./projectList";
+import { Project } from "../../data/projectList";
 
 interface ProjectProp {
   project: Project;
