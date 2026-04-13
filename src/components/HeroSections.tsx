@@ -15,6 +15,8 @@ export default function HeroSection() {
       <div className="mt-2 min-h-[40px]">
         <TypeAnimation
           sequence={[
+            "I admire problem-solving",
+            1500,
             "I love coding",
             1500,
             "I build cool stuff",

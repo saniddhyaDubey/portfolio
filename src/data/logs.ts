@@ -16,6 +16,18 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    date: "2026-04-12",
+    title: "Not Sundaying enough!",
+    body: "Watched a movie, and did some grading stuff, completing chores to keep weekday free.",
+    tags: ["weekend", "daily-routine"],
+  },
+  {
+    date: "2026-04-11",
+    title: "Casual weekend, figuring out next steps, LC Contest after so long.",
+    body: "Not a very energetic day, Mock#3 - brutual, got cooked. LC Contest, 2/4, third question was nasty. keeping it low. one day at a time.",
+    tags: ["leetcode-contest", "weekend", "daily-routine"],
+  },
+  {
     date: "2026-04-10",
     title: "More Redis work, 1 LC after 2 days, deployed two projects on render !",
     body: "Implemented Exponentially Weighted Moving Average (EWMA) algorithm for redis and migrated the singleton pattern to a strategy pattern to use either EWMA or sliding window algorithm on custom services. Well, sliding window is good, but it consumes a lot of space in memory when the number of clients are wayy more. Tested and it's working fine, now will implement unit and integration test. My eyes are set for a really good issue to cover almost 90% of the codebase. Will talk about it soon, a lot of things to learn for that. Solved 1 LC, and deployed two projects (btc realted) on render. 30 days to go for graduation!!!",
