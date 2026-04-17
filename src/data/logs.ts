@@ -16,6 +16,77 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    date: "2026-04-17",
+    title: "More DP, learned database strategies, more SoB!!!",
+    body: "Learned different types indexes in database and their usecases i.e. normal (BTree), partial, composite, GIN (this was nice). I might implement some in C++ to practice more. Covering more nostream and learning design principles to structure my approach of thinking",
+    tags: ["DP", "DSA", "leetcode", "SoB", "Nostr"],
+    more: [
+      {
+        title: "LC 2900 - Longest Unequal Adjacent Groups Subsequence I",
+        body: "A good question to see greedy in action. Key was, you always start with the first word, can't escape that. and just add the next different from current to the answer. o(n), single pass solution.",
+        tags: ["DP", "Strings", "Greedy"],
+      },
+      {
+        title: "LC 1137 - N-th Tribonacci Number",
+        body: "Straight forward question. Base case and recurrsion already given in the question. This was an implementation question.",
+        tags: ["DP", "Array"],
+      },
+      {
+        title: "LC 1668 - Maximum Repeating Substring",
+        body: "This question was good. I haven't solved the DP yet. I did sliding window kinda solution. I feel can still improve, and understand how DP actually works in this to get more insights and observation. Will upsolve this tomorrow. But, AFAIK, my solution is o(n*m), not sure. IDK why but a lil confused in this.",
+        tags: ["DP", "Strings"],
+      }
+    ],
+  },
+  {
+    date: "2026-04-16",
+    title: "Crossed 1500 on LC - LFG!!!",
+    body: "I have been scared of giving contest from so long due to the big gap. Finally, gave the courgae required and did 2/4 last week. New rating 1530. Have to cross 1600 (PR) by end of this month.",
+    tags: ["DP", "DSA", "leetcode"],
+    more: [
+      {
+        title: "LC 746 - Minimum Cost Climbing Stairs",
+        body: "Stickting to my mental model of going from recrusion -> recurrence relation -> bottom-up approach. Solved for small N values and got the pattern. Similar question as WIS, binary choice at each step. Was stuck for few mins on 2D DP solution. Got the key, I was solving till (N-1)th stair. Boiled the final solution into 1D DP. Enjoying DP!",
+        tags: ["DP", "Array"],
+      },
+      {
+        title: "LC 119 - Pascal's Triangle II",
+        body: "Straight forward recursion, T(N)[i]. = T(N-1)[i-1]+T(N-1)[i], and you do this for all value of i. At each level, starting from 0, number of elements is (level+1).",
+        tags: ["DP", "Array"],
+      }
+    ],
+  },
+  {
+    date: "2026-04-15",
+    title: "More DP, 2 DP LC!",
+    body: "Completed my understanding of WIS, started with MCM (Matrix Chain Multiplication). I feel, doing more DP helps building intuition in a much better way.",
+    tags: ["DP", "DSA", "leetcode"],
+    more: [
+      {
+        title: "LC 338 - Counting Bits",
+        body: "Started with dividing the problem and trying to think about the subproblem. I know I'm practicing DP, so not going from brute-force to all the way up in practice for now. The recurrence relation was something like, T(N) = T(N/2) for all N i.e. even, or T(N) = T(N/2) + 1 for all N i.e. odd. This shows pattern in set bits. In simple terms, if N is even, N/2=Y, the difference between set bits of N and Y is 0. and, if N is odd, the difference is 1. This observation is so strong, you can literally solve so many questions out of it. Cool trick learned today. TC - o(n), single pass from 0 to N. SC - o(n), DP 1D table.",
+        tags: ["DP", "Bit Manipulation"],
+      },
+      {
+        title: "LC 1025 - Divisor Game",
+        body: "This question made me realize one thing: DP is not always about you solve question using memoization or tabulation. Sometimes, thinking in a DP way might help you understand the pattern and learn some new observation. For, smaller values of N, solving from ground up - every subproblem - found the pattern. 1 simple check, if N odd, Alice will always lose, else she'll win easily. The optimal move is at each turn they will try to make the number odd for the next person. And, the key was, Alice always play first. Yeah, that's it!!",
+        tags: ["DP", "Math", "game-theory"],
+      }
+    ],
+  },
+  {
+    date: "2026-04-14",
+    title: "Deep dive in a large codebase",
+    body: "As i'm learning system design practically, diving into a huge codebase and dissect is really cool, if you know what you're doing. Nostream's TS code structure is amazing, trying to understand more to contribute in a much better way.",
+    tags: ["OSS", "TS"],
+  },
+  {
+    date: "2026-04-13",
+    title: "DP hands on, 1 LC, more SoB!",
+    body: "Today's deep dive on DP with basics and what makes a problem a DP question, its different methods. Started with Weighted Interval Scheduling (WIS). Learned about how a question, starting from a basic recursive approach, is boiled down to a iterative approach. The steps are beautiful.",
+    tags: ["DP", "Algorithms"],
+  },
+  {
     date: "2026-04-12",
     title: "Not Sundaying enough!",
     body: "Watched a movie, and did some grading stuff, completing chores to keep weekday free.",
