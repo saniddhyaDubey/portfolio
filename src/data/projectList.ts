@@ -16,6 +16,11 @@ export const projects: Project[] = [
     link: "https://psbtforge.onrender.com/",
   },
   {
+    image: "/images/yeetcode.jpeg",
+    title: "Yeetcode - HACK-NC",
+    link: "https://devpost.com/software/yeetcode-ngdpkc",
+  },
+  {
     image: "/images/hackathon-kh25.jpg",
     title: "Drone Challenge - KH25",
     link: "https://devpost.com/software/nextera-energy-drone-optimization-challenge",
