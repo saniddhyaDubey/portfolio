@@ -284,8 +284,8 @@ export default function LogTimeline() {
         </p>
 
         {/* scrollable strip */}
-        <div className="overflow-x-auto pb-1">
-          <div className="flex gap-[3px] min-w-max">
+        <div>
+          <div className="flex flex-wrap gap-[3px]">
             {heatmapDays.map(({ dateStr, hasEntry, isToday }) => (
               <button
                 key={dateStr}

@@ -16,6 +16,54 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-05-09",
+    "title": "GRAND FINALE",
+    "body": "Officially a Master's student for the last time.",
+    "tags": ["MS CS"],
+  },
+  {
+    "date": "2026-05-08",
+    "title": "BIG NEWS INCOMINGGGG, STAY TUNEDDDD",
+    "body": "24 hours to go, see you tomorrow.",
+    "tags": ["daily routine"],
+  },
+  {
+    "date": "2026-05-07",
+    "title": "2 DTG for graduation",
+    "body": "Next 4-6 days will be chill and relaxing. I'm about to enjoy my graduation and then will be back to the grind. I have a lot of things to learn and work on, but for now, I'm just gonna enjoy this moment. Graduation is such a big milestone in life, and I'm so grateful for this opportunity. LFG!!!",
+    "tags": ["MS Graduation", "personal"],
+  },
+  {
+    "date": "2026-05-06",
+    "title": "SoB'26 it is, Nostr is the one. I GOT INNNNNNN",
+    "body": "Finally I got the news, I got selected for SoB'26 with Nostr. I'm so happy and excited to work on this project. I will be working on Moderation and Discovery Engine to prevent spamming. This is such a cool project, and I'm so grateful for this opportunity. LFG!!!",
+    "tags": ["SoB'26"],
+  },
+  {
+    "date": "2026-05-05",
+    "title": "Contest series",
+    "body": "Planning this week but will be starting to give all the LC weekly and biweekly contest virtually to boost my DSA and algorithms skills. 12 hours to go for the SoB'26 results, hoping for the best.",
+    "tags": ["LC Series"],
+  },
+  {
+    "date": "2026-05-04",
+    "title": "survived 1st round of rejection",
+    "body": "First round of results are out and I'm still awaiting mine. 4 momths of hard work and learning, and I feel bad for the students who got rejected. Hoping for the best.",
+    "tags": ["SoB'26", "daily routine"],
+  },
+  {
+    "date": "2026-05-03",
+    "title": "Minesweeper hustle and LC grind - 24HTG",
+    "body": "Played minesweeper PvP and did LC. Graduation in a week from now on, student life is coming to an end, and I have no words to describe how I feel about it. I will miss this life, but also excited for the next chapter. LFG!!!",
+    "tags": ["minesweeper", "leetcode"],
+  },
+  {
+    "date": "2026-05-02",
+    "title": "Weekly Contest + Nostream bugs",
+    "body": "Did LC weekly contest 500. A final PR to nostream about fixing a DoS attack bug. PR merged and awaiting result for my summer internship application.",
+    "tags": ["leetcode", "Nostream", "OSS", "SoB'26"],
+  },
+  {
     "date": "2026-05-01",
     "title": "3/4 on virtual contest + nostream bugs found",
     "body": "Did virtual contest for the last week biweekly's contest, got 3/4 (yeah yeah I had to took some help with a specific function at the end, so what, this is how we learn.). Also, found few critical bugs in nostream worth fixing, might share about the details while I work on it.",
