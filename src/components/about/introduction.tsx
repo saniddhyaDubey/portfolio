@@ -11,11 +11,12 @@ export default function IntroContent() {
       {/* Right Column */}
       <div className="lg:w-1/2 ">
         <p className="font-courier text-lg text-black dark:text-gray-400 leading-relaxed">
-          I&apos;m not a nerd but I like all those things (mathematics, algorithms, computer, rubik&apos;s cube).
-          My main weapon is C++, writing code is so crazy and cool, learn and build. Only thing I focus on daily is
-          DSA (daily leetcode), System design, some what development (thank you claude).
-          &ldquo;My out-of-the-box thinking and eagerness to dive into technologies has allowed me
-          to become an extremely capable developer&rdquo;, well this what I have been told by people around me.
+          I&apos;m quite nerdy, my goto things (mathematics, algorithms, computer, rubik&apos;s cube).
+          My side hustle is coding in C++, which makes me go crazy and cool at the same time and also help me 
+         learn and build. My focal length covers leetcode, System design, and thanks to claude I spent more time 
+         some learning and less on development. &ldquo;My out-of-the-box thinking and eagerness to dive
+         into technologies has allowed me to become an extremely capable developer&rdquo;, well this 
+         is what I have been told by people around me.
         </p>
       </div>
     </section>

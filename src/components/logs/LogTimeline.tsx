@@ -34,28 +34,28 @@ function formatShort(dateStr: string): string {
   });
 }
 
-// ─── heatmap square ───────────────────────────────────────────────────────────
+// ─── all-time stats ───────────────────────────────────────────────────────────
 
-function squareClass(
-  isSelected: boolean,
-  isToday: boolean,
-  hasEntry: boolean
-): string {
-  const base =
-    "w-[11px] h-[11px] rounded-[2px] flex-shrink-0 transition-all duration-150";
+function computeStats(sortedDates: string[]) {
+  const total = logs.reduce((sum, l) => sum + 1 + (l.more?.length ?? 0), 0);
+  const days = sortedDates.length;
 
-  if (isSelected) {
-    return `${base} bg-pink-500 ring-2 ring-pink-500 ring-offset-[2px] ring-offset-white dark:ring-offset-black scale-[1.3] cursor-pointer`;
+  // longest consecutive-day streak
+  let best = 0;
+  let run = 0;
+  for (let i = 0; i < sortedDates.length; i++) {
+    if (i === 0) { run = 1; }
+    else {
+      const prev = new Date(sortedDates[i - 1]);
+      const curr = new Date(sortedDates[i]);
+      const diff = (prev.getTime() - curr.getTime()) / 86_400_000;
+      run = diff === 1 ? run + 1 : 1;
+    }
+    if (run > best) best = run;
   }
-  if (isToday) {
-    return `${base} ring-1 ring-pink-400 ring-offset-[2px] ring-offset-white dark:ring-offset-black ${
-      hasEntry ? "bg-pink-500 cursor-pointer" : "bg-transparent"
-    }`;
-  }
-  if (hasEntry) {
-    return `${base} bg-pink-400/60 hover:bg-pink-500 cursor-pointer`;
-  }
-  return `${base} bg-black/10 dark:bg-white/[0.12] cursor-default`;
+
+  const oldest = sortedDates[sortedDates.length - 1] ?? "";
+  return { total, days, streak: best, oldest };
 }
 
 // ─── reusable entry block (used for main + more[]) ───────────────────────────
@@ -130,18 +130,6 @@ export default function LogTimeline() {
     setMounted(true);
   }, [logsByDate, sortedDates]);
 
-  // 45-day heatmap — oldest on left, today on right
-  const heatmapDays = useMemo(() => {
-    if (!todayStr) return [];
-    const [ty, tm, td] = todayStr.split("-").map(Number);
-    return Array.from({ length: 45 }, (_, i) => {
-      const d = new Date(ty, tm - 1, td);
-      d.setDate(d.getDate() - (44 - i));
-      const dateStr = toDateStr(d);
-      return { dateStr, hasEntry: logsByDate.has(dateStr), isToday: dateStr === todayStr };
-    });
-  }, [todayStr, logsByDate]);
-
   // navigation
   const currentIndex = sortedDates.indexOf(selectedDate);
   const olderDate = currentIndex < sortedDates.length - 1 ? sortedDates[currentIndex + 1] : null;
@@ -170,51 +158,53 @@ export default function LogTimeline() {
       </div>
 
       {/* ── date navigation bar ── */}
-      <div className="flex items-center justify-between mb-5">
-        {/* ← older */}
-        <button
-          onClick={() => olderDate && navigate(olderDate, -1)}
-          disabled={!olderDate}
-          className={`font-mono text-xs flex items-center gap-1 transition-colors ${
-            olderDate
-              ? "text-gray-500 hover:text-pink-500 cursor-pointer"
-              : "text-gray-300 dark:text-gray-700 cursor-not-allowed"
-          }`}
-        >
-          ←&nbsp;{olderDate ? formatShort(olderDate) : "—"}
-        </button>
-
-        {/* center label */}
-        <div className="text-center">
-          {selectedDate !== todayStr && (
+      <div className="mb-5">
+        {/* center: today badge + current date */}
+        <div className="text-center mb-4">
+          {selectedDate === todayStr ? (
+            <span className="font-mono text-[10px] uppercase tracking-widest text-pink-500">
+              today
+            </span>
+          ) : (
             <button
               onClick={() => {
                 const target = logsByDate.has(todayStr) ? todayStr : sortedDates[0];
                 if (target) navigate(target, 1);
               }}
-              className="font-mono text-[10px] uppercase tracking-widest text-pink-500 hover:underline block mb-0.5"
+              className="font-mono text-[10px] uppercase tracking-widest text-pink-500 hover:underline"
             >
-              ↩ today
+              ↩ back to today
             </button>
           )}
-          <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500">
-            {selectedDate === todayStr ? "today" : ""}
-          </p>
-          <p className="font-mono text-sm font-semibold">{formatLong(selectedDate)}</p>
+          <p className="font-mono text-base font-bold mt-1">{formatLong(selectedDate)}</p>
         </div>
 
-        {/* newer → */}
-        <button
-          onClick={() => newerDate && navigate(newerDate, 1)}
-          disabled={!newerDate}
-          className={`font-mono text-xs flex items-center gap-1 transition-colors ${
-            newerDate
-              ? "text-gray-500 hover:text-pink-500 cursor-pointer"
-              : "text-gray-300 dark:text-gray-700 cursor-not-allowed"
-          }`}
-        >
-          {newerDate ? formatShort(newerDate) : "—"}&nbsp;→
-        </button>
+        {/* prev / next buttons */}
+        <div className="flex items-center justify-between gap-3">
+          <button
+            onClick={() => olderDate && navigate(olderDate, -1)}
+            disabled={!olderDate}
+            className={`flex items-center gap-2 px-3 py-1.5 border font-mono text-xs transition-colors duration-150 ${
+              olderDate
+                ? "border-black/20 dark:border-white/20 text-gray-600 dark:text-gray-300 hover:border-pink-500 hover:text-pink-500 cursor-pointer"
+                : "border-black/8 dark:border-white/8 text-gray-300 dark:text-gray-700 cursor-not-allowed"
+            }`}
+          >
+            ←&nbsp;<span>{olderDate ? formatShort(olderDate) : "—"}</span>
+          </button>
+
+          <button
+            onClick={() => newerDate && navigate(newerDate, 1)}
+            disabled={!newerDate}
+            className={`flex items-center gap-2 px-3 py-1.5 border font-mono text-xs transition-colors duration-150 ${
+              newerDate
+                ? "border-black/20 dark:border-white/20 text-gray-600 dark:text-gray-300 hover:border-pink-500 hover:text-pink-500 cursor-pointer"
+                : "border-black/8 dark:border-white/8 text-gray-300 dark:text-gray-700 cursor-not-allowed"
+            }`}
+          >
+            <span>{newerDate ? formatShort(newerDate) : "—"}</span>&nbsp;→
+          </button>
+        </div>
       </div>
 
       {/* ── entry card ── */}
@@ -277,45 +267,31 @@ export default function LogTimeline() {
         )}
       </AnimatePresence>
 
-      {/* ── 45-day heatmap ── */}
-      <div className="mt-14 md:mt-16">
-        <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-3">
-          — last 45 days
-        </p>
-
-        {/* scrollable strip */}
-        <div>
-          <div className="flex flex-wrap gap-[3px]">
-            {heatmapDays.map(({ dateStr, hasEntry, isToday }) => (
-              <button
-                key={dateStr}
-                title={`${formatShort(dateStr)}${hasEntry ? " · has entry" : ""}`}
-                onClick={() => {
-                  if (!hasEntry) return;
-                  navigate(dateStr, dateStr > selectedDate ? 1 : -1);
-                }}
-                className={squareClass(dateStr === selectedDate, isToday, hasEntry)}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* date labels */}
-        <div className="flex justify-between mt-1.5">
-          <span className="font-mono text-[10px] text-gray-400 dark:text-gray-500">
-            {heatmapDays[0] ? formatShort(heatmapDays[0].dateStr) : ""}
-          </span>
-          <span className="font-mono text-[10px] text-gray-400 dark:text-gray-500">today</span>
-        </div>
-      </div>
-
-      {/* entry count */}
+      {/* ── all-time stats ── */}
       {(() => {
-        const total = logs.reduce((sum, l) => sum + 1 + (l.more?.length ?? 0), 0);
+        const { total, days, streak, oldest } = computeStats(sortedDates);
+        const stats = [
+          { label: "entries", value: total },
+          { label: "days", value: days },
+          { label: "best streak", value: `${streak}d` },
+          { label: "since", value: oldest ? formatShort(oldest) : "—" },
+        ];
         return (
-          <p className="font-mono text-[10px] text-gray-400 dark:text-gray-600 mt-5">
-            {total} {total === 1 ? "entry" : "entries"} across {logs.length} {logs.length === 1 ? "day" : "days"}
-          </p>
+          <div className="mt-14 md:mt-16 border-t border-black/10 dark:border-white/10 pt-6">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-4">
+              — all time
+            </p>
+            <div className="flex gap-8 flex-wrap">
+              {stats.map(({ label, value }) => (
+                <div key={label}>
+                  <p className="font-mono text-lg font-bold">{value}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-gray-400 dark:text-gray-500 mt-0.5">
+                    {label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         );
       })()}
     </div>
