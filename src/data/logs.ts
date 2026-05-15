@@ -16,6 +16,50 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-05-14",
+    "title": "Back at LEETCODE",
+    "body": "Leetcode grind is back. Did many problems today and not happy with few, I messed big time, but it's okay.",
+    "tags": ["networking"],
+    "more": [
+      {
+        "title": "LC 3781 - Maximum Score After Binary Swaps",
+        "body": "I still need more practice to actually understand the question more deeply. My intuition was wrong and I was trying to solve the question in a different way. Actual solution requires priority queue."
+      },
+      {
+        "title": "LC 2140 - Solving Questions with Brainpower",
+        "body": "WHAT A FREAKIN' QUESTION. My first attempt was making a directed graph and apply DFS and keep the track of max score using a global variable. But, totally missed the point of different sequence. The question was actually a DP question. The subproblem were overlapping, so created a recursive tree to better understand it. The question says paper will be solved in order starting from 1st question, so started recursive tree from q0 and at each step made the binary choice. Understood the recursive tree. Coming to implementation, my goto thing is bottom-up DP, so I started with it, but maintaining states from q0 upto the last question was difficult, because the cooldown period, brainpower at each question, is still unknown for future question. So, the trick is to do bottom-up DP from the last question all the way upto the first. At each point, if that question + brainpower cooldown + 1 is a valid question, then max(dp[next_question], curr_score+dp[brainpower+1]) or else max(curr_score, dp[next_question])."
+      },
+      {
+        "title": "LC 62 - Unique Paths",
+        "body": "Using a 2D DP was easy, just at each cell keep the track of maximum path that can end up at that cell. But, I got the feeling that this can be solved using maths. So, the question is, we have to move right and down only, so for a grid of m*n, we have to move right (n-1) times and down (m-1) times. So, the total number of moves is (m+n-2) and we have to choose (n-1) or (m-1) from those moves. So, the answer is basically nCr(m+n-2, n-1) or nCr(m+n-2, m-1). This was a good question to see how you can solve a DP question using maths."
+      }
+    ]
+  },
+  {
+    "date": "2026-05-13",
+    "title": "Research Day - 2",
+    "body": "I am scared but it is what it is. I have to do this, I have to give my best. I am gonna give my best and hope for the best. I will keep you all posted about the journey.",
+    "tags": ["Big move"],
+  },
+  {
+    "date": "2026-05-12",
+    "title": "Research Day",
+    "body": "Learning and planning next steps for my goals. Nothing else to add.",
+    "tags": ["Big move"],
+  },
+  {
+    "date": "2026-05-11",
+    "title": "Virtual Coffee Chat with an EM from Canada",
+    "body": "Got to know how eng teams around the world are adopting AI in their workflow, and how they are using it to boost their productivity. AI-SDLC, a new term and what it actually means. Working on something big for myself, STAY TUNEDDDDD.",
+    "tags": ["networking"],
+  },
+  {
+    "date": "2026-05-10",
+    "title": "Chilling and enjoying the moment",
+    "body": "Going on a 4 day break to relax from the burnout. I am very exhausted, and planning to be back with leetcode and more learning after this. See you all soon.",
+    "tags": ["personal", "break"],
+  },
+  {
     "date": "2026-05-09",
     "title": "GRAND FINALE",
     "body": "Officially a Master's student for the last time.",
@@ -35,8 +79,8 @@ export const logs: LogEntry[] = [
   },
   {
     "date": "2026-05-06",
-    "title": "SoB'26 it is, Nostr is the one. I GOT INNNNNNN",
-    "body": "Finally I got the news, I got selected for SoB'26 with Nostr. I'm so happy and excited to work on this project. I will be working on Moderation and Discovery Engine to prevent spamming. This is such a cool project, and I'm so grateful for this opportunity. LFG!!!",
+    "title": "SoB'26 it is, Nostream is the one. I GOT INNNNNNN",
+    "body": "Finally I got the news, I got selected for SoB'26 with Nostream for Nostr. I'm so happy and excited to work on this project. I will be working on Moderation and Discovery Engine to prevent spamming. This is such a cool project, and I'm so grateful for this opportunity. LFG!!!",
     "tags": ["SoB'26"],
   },
   {
