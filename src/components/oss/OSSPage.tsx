@@ -21,14 +21,12 @@ const STATUS_STYLES: Record<OSSStatus, string> = {
   merged:    "bg-pink-500/10 text-pink-500 border-pink-500/30",
   open:      "bg-emerald-500/10 text-emerald-500 border-emerald-500/30",
   "in-review": "bg-yellow-500/10 text-yellow-500 border-yellow-500/30",
-  closed:    "bg-black/5 dark:bg-white/5 text-gray-400 border-black/10 dark:border-white/10",
 };
 
 const STATUS_DOT: Record<OSSStatus, string> = {
   merged:    "bg-pink-500",
   open:      "bg-emerald-500",
   "in-review": "bg-yellow-400",
-  closed:    "bg-gray-400",
 };
 
 function StatusBadge({ status }: { status: OSSStatus }) {
@@ -174,7 +172,7 @@ function StatsRow() {
 
 // ─── main component ───────────────────────────────────────────────────────────
 
-const ALL_STATUSES: OSSStatus[] = ["merged", "open", "in-review", "closed"];
+const ALL_STATUSES: OSSStatus[] = ["merged", "open", "in-review"];
 const ALL_TYPES: OSSContribution["type"][] = ["bugfix", "feature", "docs", "refactor", "test"];
 
 export default function OSSPage() {
@@ -191,7 +189,7 @@ export default function OSSPage() {
 
   // sort: merged first, then in-review, open, closed; then by date desc
   const sorted = useMemo(() => {
-    const ORDER: Record<OSSStatus, number> = { merged: 0, "in-review": 1, open: 2, closed: 3 };
+    const ORDER: Record<OSSStatus, number> = { merged: 0, "in-review": 1, open: 2 };
     return [...filtered].sort(
       (a, b) =>
         ORDER[a.status] - ORDER[b.status] || b.date.localeCompare(a.date)
