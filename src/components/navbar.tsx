@@ -12,6 +12,7 @@ import { SiLeetcode, SiCodeforces, SiDevpost } from "react-icons/si";
 const links = [
   { href: "/", label: "Home" },
   { href: "/logs", label: "Logs" },
+  { href: "/oss", label: "OSS" },
   { href: "/about", label: "About" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
