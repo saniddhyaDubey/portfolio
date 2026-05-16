@@ -16,6 +16,18 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-05-15",
+    "title": "PROFILE UPDATE + 1 DP Q",
+    "body": "Started again my job hunt and updated my profile with all the new learnings and projects. Also, added a new page on my portfolio showing my github contributions to open source repo. Pretty excited to add more stuffs to it.",
+    "tags": ["daily routine", "LC", "DP"],
+    "more": [
+      {
+        "title": "LC 63 - Unique Paths II",
+        "body": "Started with the DP approach but I made it too complex in my head. So, boiled down and started with a naive backtracking brute force approach. TC got o(2^m+n-2) and SC got o(m+n) due to recursion stack. Then, started with DP but again got confused. The key was to understand when to update. I was looping back in my head and making the same mistakes. Finally, wrote a clean 2D DP solution travelling from destination to source. At each cell, if it's an obstacle, dp[i][j]=0, else dp[i][j] = dp[i+1][j]+dp[i][j+1]. This was a good question to understand how to deal with obstacles in DP questions.",
+      }
+    ]
+  },
+  {
     "date": "2026-05-14",
     "title": "Back at LEETCODE",
     "body": "Leetcode grind is back. Did many problems today and not happy with few, I messed big time, but it's okay.",
