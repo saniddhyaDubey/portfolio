@@ -16,6 +16,64 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-05-20",
+    "title": "Back at LC, dive deep into matrix questions, upsolving contest",
+    "body": "Had a good day today, solved some good questions and learned a lot.",
+    "tags": ["leetcode", "DSA", "daily routine"],
+    "more": [
+      {
+        "title": "LC 1672 - Richest Customer Wealth",
+        "body": "Simple per customer wealth calculation and keep track of the maximum. TC - o(m*n) where m is number of customers and n is number of accounts per customer. SC - o(1) as we are not using any extra space."
+      },
+      {
+        "title": "LC 2373 - Largest Local Values in a Matrix",
+        "body": "Iterate through the matrix and for each cell, calculate the maximum value in the 3x3 block centered at that cell. TC - o(m*n) where m and n are dimensions of the matrix. SC - o(1) as we are not using any extra space."
+      },
+      {
+        "title": "LC 1476 - Subrectangle Queries",
+        "body": "Implemented a class with two methods: updateSubrectangle and getValue. The updateSubrectangle method updates the values in the specified subrectangle, and the getValue method returns the value at the specified coordinates. TC for updateSubrectangle is o((row2-row1+1)*(col2-col1+1)) and for getValue is o(1). SC - o(m*n) where m and n are dimensions of the rectangle, as we are storing the entire rectangle in memory. To improve the space complexity, we can use a lazy update approach where we only store the updates and apply them when getValue is called. This way, the space complexity can be reduced to o(k) where k is the number of updates made."
+      },
+      {
+        "title": "LC 2545 - Sort the Students by Their Kth Score",
+        "body": "Sort the students based on their kth score in descending order. TC - o(n log n) where n is the number of students. SC - o(n) for the sorting algorithm."
+      },
+      {
+        "title": "LC 3932 - Count K-th Roots of a Number",
+        "body": "Upsolving last week's contest question. I messed up totally and the key insight is never iterate the full range [l,r] when you can find a better way to calculate the answer. Iterate the candidates for the kth root which are in the range [l,r]. There's one more solution I found, calculate the count of numbers in the range [1, n] and count of numbers in the range [1, l-1], and return the difference as the answer. This trick I have seen so many times, I'd learn more about it to understand the pattern."
+      }
+    ]
+  },
+  {
+    "date": "2026-05-19",
+    "title": "Recovering",
+    "body": "Had a very bad day yesterday, got sick and had to take rest. Feeling better today, but still recovering. I will be back to my routine soon.",
+    "tags": ["health", "recovery"],
+  },
+  {
+    "date": "2026-05-18",
+    "title": "Complete rest",
+    "body": " Took a break and rested well.",
+    "tags": ["rest", "break"],
+  },
+  {
+    "date": "2026-05-17",
+    "title": "A GOOD DAY TO CODE",
+    "body": "Had a good day today, solved some good questions and learned a lot. I feel like I'm getting better at algorithms and problem solving. I will keep practicing and learning more to get better and better.",
+    "tags": ["leetcode", "DSA", "daily routine"],
+    "more": [
+      {
+        "title": "LC 154 - Find Minimum in Rotated Sorted Array II",
+        "body": "This was a good question to understand how to deal with duplicates in binary search. The key was, when we have duplicates, we can't be sure which side is sorted, so we just move the left pointer by one and continue the search. This way, we can still achieve o(log n) in average case, but in worst case it can degrade to o(n) when all elements are the same."
+      }
+    ]
+  },
+  {
+    "date": "2026-05-16",
+    "title": "NOT A GOOD DAY TO CODE",
+    "body": "I couldn't solve any question i touched in the contest optimally, got TLE in every question. I did knew the concept to solve optimally but I just had not enough practice to implement in the given time. Contest went very baddddddddd. I will upsolve all the questions and write about them here.",
+    "tags": ["leetcode", "contest", "DSA"],
+  },
+  {
     "date": "2026-05-15",
     "title": "PROFILE UPDATE + 1 DP Q",
     "body": "Started again my job hunt and updated my profile with all the new learnings and projects. Also, added a new page on my portfolio showing my github contributions to open source repo. Pretty excited to add more stuffs to it.",
