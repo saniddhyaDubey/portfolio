@@ -35,7 +35,7 @@ export default function HeroSection() {
 
       {/* Optional Description */}
       <p className="font-courier text-lg text-black dark:text-gray-400 mt-8">
-        A passionate software engineer, enthusiast in backend and blockchain, based in Charlotte, NC.
+        A passionate software engineer, enthusiast in backend and blockchain, based in NYC 🗽.
       </p>
 
       {/* Buttons */}
