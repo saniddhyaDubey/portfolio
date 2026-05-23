@@ -16,6 +16,24 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-05-22",
+    "title": "SEGMENT TREE DAY",
+    "body": "was stucked on a range query question on a matrix. Finally, learned about segment tree and how it can be used to solve range query questions in o(log n) time. This was a good question to understand the concept of segment tree and how it can be used to solve range query questions.",
+    "tags": ["segment tree", "range query", "DSA"],
+    "more": [
+      {
+        "title": "LC 3933 - Largest Local Values in a Matrix II",
+        "body": "This was a good question to understand how to use segment tree to solve range query questions. The key was to build a segment tree for each row of the matrix and then use it to answer the queries. TC - o(m*n log n) where m and n are dimensions of the matrix. SC - o(m*n*4) for the segment tree as for each row, we are building a segment tree which takes 4 times the space of the row."
+      }
+    ]
+  },
+  {
+    "date": "2026-05-21",
+    "title": "OKAYISH",
+    "body": "Spent time learning about some more maths, and a bit time complexity. Busy with a lot of things currently and managing all. I guess my actual grind will start from june with everything I have planned.",
+    "tags": ["maths", "time complexity", "daily routine"],
+  },
+  {
     "date": "2026-05-20",
     "title": "Back at LC, dive deep into matrix questions, upsolving contest",
     "body": "Had a good day today, solved some good questions and learned a lot.",
