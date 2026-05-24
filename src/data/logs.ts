@@ -16,6 +16,26 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-05-23",
+    "title": "MORE SEGMENT TREE, LC CONTEST, GOOD WEATHER",
+    "body": "relaxing weekend, so the grind stays light. LC contest got under my skin. I felt I got the 4th question, but I messed up. got TLE. Came back to the 3rd, i feel it's purely maths based, but still can't prove it. Still working on the solution, will solve bymyself even though how worst of a solution it might be.",
+    "tags": ["segment tree", "leetcode", "daily routine"],
+    "more": [
+      {
+        "title": "LC 921 - Minimum Add to Make Parentheses Valid",
+        "body": "Out of nowhere, did this question with a friend. Long time since I solved anything with stack. The key was to keep a track of balance between open and close. can be done using stack or just a counter. TC - o(n) single pass, SC - o(n) for stack and o(1) for counter. for every open, increase the open counter, for close check if there's an open available, if yes, decrease the open counter, else increase the close counter. At the end, answer is sum of open and close counter."
+      },
+      {
+        "title": "LC 3940 - Limit Occurrences in Sorted Array",
+        "body": "didn't gave much thought. kept it simple, used an ordered map for the count and for each number added min(count, k) time to the answer. TC - o(n log n) due to ordered map, SC - o(n) for the map and answer array."
+      },
+      {
+        "title": "LC 3941 - Password Strength",
+        "body": "set for special chars and a set for visited chars. single iteration and constant time check using built-in functions like isupper, islower, isdigit and set lookup for special chars. TC - o(n) single pass, SC - o(1) as we are using constant space for the sets and counters."
+      }
+    ]
+  },
+  {
     "date": "2026-05-22",
     "title": "SEGMENT TREE DAY",
     "body": "was stucked on a range query question on a matrix. Finally, learned about segment tree and how it can be used to solve range query questions in o(log n) time. This was a good question to understand the concept of segment tree and how it can be used to solve range query questions.",
