@@ -16,6 +16,36 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-06-03",
+    "title": "I MOVED TO NYC, LFG!!!",
+    "body": "From past 5 days, I've been hustlin' a lot to work and manage everything. There's so many things new I have to figure out and manage my time. But, honestly the more I stay busy, the more I feel good. Like, god, I'm actually doing something, I'm actually working on my goals. Will get back to grind but on another level soon, keep working, LFG 🚀🚀",
+    "tags": ["personal", "big move"],
+  },
+  {
+    "date": "2026-05-26",
+    "title": "Regular Day, 2 DTG",
+    "body": "did some chores, upsolved the contest questions. More focus on job hunt. Planning few things side by side.",
+    "tags": ["daily routine", "job hunt"],
+    "more": [
+      {
+        "title": "LC 3942 - Minimum Operations to Sort a Permutation",
+        "body": "Couldn't solve this one during contest. I spent a long time to understand this question. The key to start was to understand the pattern. Given, that only 2 possible moves are allowed, the tree becomes so much smaller to work with. The 2 seeds i.e. to sorted permutation, and reverse of it. doing the shift by one operation on both and the element are reverse of each other. My initial approach was to build a graph and connect and find the shortest distance. But, given the constraints, building graph will take o(n^2) which is not feasible. So, this brings us to the question, is it possible to calculate the distance without knowing the path? The answer is yes, based on the 2 operation, either there will be an increasing or decreasing pattern. It can be either one or none. So, if it's an increasing pattern, the minimum will be min(i+1, 2+(n-1)-i). i is the index of 0 in the given permutation. If it's a decreasing pattern, the minimum will be min(i+2, 1+(n-1)-i). If it's neither, then the answer is 2. TC - o(n) to find the index of 0 and check the pattern. SC - o(1) as we are using constant space for the variables. Great question.",
+      },
+    ]
+  },
+  {
+    "date": "2026-05-25",
+    "title": "3 DTG",
+    "body": "I'm so nervous and excited atp.",
+    "tags": ["personal"],
+  },
+  {
+    "date": "2026-05-24",
+    "title": "LAST SUNDAY IN NC",
+    "body": "MORE TO COME",
+    "tags": ["personal"],
+  },
+  {
     "date": "2026-05-23",
     "title": "MORE SEGMENT TREE, LC CONTEST, GOOD WEATHER",
     "body": "relaxing weekend, so the grind stays light. LC contest got under my skin. I felt I got the 4th question, but I messed up. got TLE. Came back to the 3rd, i feel it's purely maths based, but still can't prove it. Still working on the solution, will solve bymyself even though how worst of a solution it might be.",
