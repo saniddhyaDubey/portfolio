@@ -16,6 +16,18 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-06-06",
+    "title": "Back to NC, back to grind",
+    "body": "I have been planning few things to start from this monday. Content creation is one of them but not the traditional way, more of a yapping way, just talking about my journey, what I'm learning, what I'm doing, and all the stuffs. I'm gonna grind so many things at once. Hope i can manage all and keep the consistency. STAY FOCUSED (:",
+    "tags": ["personal"],
+  },
+  {
+    "date": "2026-06-04",
+    "title": "FIRST DAY IN NYC",
+    "body": "Relaxing and enjoying the moment. I have been so busy with the move and everything, but I'm finally here in NYC. It's such a big change from NC, but I'm excited to explore and experience everything this city has to offer. LFG!!!",
+    "tags": ["personal", "big move"],
+  },
+  {
     "date": "2026-06-03",
     "title": "I MOVED TO NYC, LFG!!!",
     "body": "From past 5 days, I've been hustlin' a lot to work and manage everything. There's so many things new I have to figure out and manage my time. But, honestly the more I stay busy, the more I feel good. Like, god, I'm actually doing something, I'm actually working on my goals. Will get back to grind but on another level soon, keep working, LFG 🚀🚀",
