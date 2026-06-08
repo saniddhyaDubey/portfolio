@@ -16,6 +16,12 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-06-07",
+    "title": "vibe-coding day",
+    "body": "did a lot of vibecoding to get few things automated. Finally hit 1M token with claude code, new goal is to reach 5M by end of this month. Happy building.",
+    "tags": ["claudecode", "buildin'"]
+  },
+  {
     "date": "2026-06-06",
     "title": "Back to NC, back to grind",
     "body": "I have been planning few things to start from this monday. Content creation is one of them but not the traditional way, more of a yapping way, just talking about my journey, what I'm learning, what I'm doing, and all the stuffs. I'm gonna grind so many things at once. Hope i can manage all and keep the consistency. STAY FOCUSED (:",
