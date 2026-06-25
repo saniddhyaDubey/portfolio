@@ -15,19 +15,6 @@ export type OSSContribution = {
 
 export const ossContributions: OSSContribution[] = [
   {
-    repo: "bitcoinfuzz/bitcoinfuzz",
-    repoUrl: "https://github.com/bitcoinfuzz/bitcoinfuzz",
-    title: "feat: added python-hd wallet to bitcoin fuzz",
-    description:
-      "Added a python-hd wallet to the bitcoin fuzzing framework. This allows for more flexible and powerful wallet management during fuzz testing, enabling the generation of a wider variety of test cases and scenarios. The python-hd wallet can be used to create hierarchical deterministic wallets, which are essential for testing various aspects of Bitcoin's wallet functionality, including key management, transaction signing, and address generation. This is important for improving the coverage and effectiveness of the fuzz testing process, ultimately leading to a more robust and secure Bitcoin implementation.",
-    prUrl: "https://github.com/bitcoinfuzz/bitcoinfuzz/pull/544",
-    prNumber: "#544",
-    status: "open",
-    type: "feature",
-    tags: ["bitcoin", "fuzzing", "python-hd wallet", "test framework"],
-    date: "2026-04-27",
-  },
-  {
     repo: "cameri/nostream",
     repoUrl: "https://github.com/cameri/nostream",
     title: "fix: maxlimit check to subscription event requests",
