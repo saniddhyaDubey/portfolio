@@ -16,6 +16,12 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-06-24",
+    "title": "SO MANY UPDATES IN PAST 14 DAYS, WAS SUPER BUSY. WILL KEEP POSTED!!!",
+    "body": "I'm back with updating logs. Time to get back on hustle. Right now, getting back on track with applications and a consistent competitive programming practice!",
+    "tags": ["routine"]
+  },
+  {
     "date": "2026-06-10",
     "title": "Back to the job hunt grind & completing backlogs",
     "body": "Spent a week with claude to personalize my job application. All the tools out right now, are very noisy and you get lost. Applied to 2 companies with tailored resume. Still polishing resume is the #1 skill in the current market i feel. Also, added vercel insights tracking to my portfolio, so hoping to get some good metrics and know about traffic on a live deployed website. MORE TO COME.",
