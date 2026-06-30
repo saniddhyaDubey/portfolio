@@ -16,6 +16,12 @@ export type LogEntry = {
 
 export const logs: LogEntry[] = [
   {
+    "date": "2026-06-29",
+    "title": "Started with CF all over again",
+    "body": "Goal is to consistently spend 2-3 hours daily on CF and make myself less dumb. Following TLE CP-31 sheet, great resource NGL.",
+    "tags": ["CP journey"]
+  },
+  {
     "date": "2026-06-24",
     "title": "SO MANY UPDATES IN PAST 14 DAYS, WAS SUPER BUSY. WILL KEEP POSTED!!!",
     "body": "I'm back with updating logs. Time to get back on hustle. Right now, getting back on track with applications and a consistent competitive programming practice!",
